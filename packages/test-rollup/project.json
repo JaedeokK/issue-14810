@@ -1,0 +1,26 @@
+{
+  "name": "test-rollup",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/test-rollup/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/rollup:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/test-rollup",
+        "main": "packages/test-rollup/src/index.ts",
+        "tsConfig": "packages/test-rollup/tsconfig.lib.json",
+        "assets": []
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/test-rollup/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}

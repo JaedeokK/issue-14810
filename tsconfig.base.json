@@ -14,7 +14,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@issue-14810/test-esbuild": ["packages/test-esbuild/src/index.ts"],
+      "@issue-14810/test-rollup": ["packages/test-rollup/src/index.ts"],
+      "@issue-14810/test-tsc": ["packages/test-tsc/src/index.ts"],
+      "@issue-14810/test-vite": ["packages/test-vite/src/index.ts"],
+      "@issue-14810/test-webpack": ["packages/test-webpack/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

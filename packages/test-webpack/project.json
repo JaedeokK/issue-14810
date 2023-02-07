@@ -1,0 +1,26 @@
+{
+  "name": "test-webpack",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/test-webpack/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/test-webpack",
+        "main": "packages/test-webpack/src/index.ts",
+        "tsConfig": "packages/test-webpack/tsconfig.lib.json",
+        "assets": []
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/test-webpack/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}
